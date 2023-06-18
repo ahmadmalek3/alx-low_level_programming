@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c "$CFILE" -o "${CFILE%.*}.o" && echo "Compilation successful" || echo "Compilation failed"
+gcc -c "$CFILE" -o "${CFILE%.*}.o"
