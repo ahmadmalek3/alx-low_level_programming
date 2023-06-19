@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- *  this is a print program for specific sentence
+ * main -  entry point
  *
- *  the main is the entry point of the program
+ *Description: a C program that prints by puts function
  *
- *  return is zero her
+ * Return: always 0 (success)
 */
 int main(void)
 {
