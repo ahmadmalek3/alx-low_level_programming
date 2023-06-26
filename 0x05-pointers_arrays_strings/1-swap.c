@@ -2,6 +2,7 @@
 
 /**
  * swap_int: fanction that swap two integers
+ * by the pointers
  *
  * @a: input parameter 1
  * @b: input parameter 2
