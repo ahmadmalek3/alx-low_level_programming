@@ -1,16 +1,19 @@
-/**
-* main - Entry point
-*
-* Return: Always 0
-*/
+#include <stdio.h>
 
-char *_memset(char *s, char b, unsigned int n)
-{	
-	unsigned int i;
-	for (i = 0; i < n; i++)
+char *_memset(char *s, char b, unsigned int n);
+
+int main(void)
+{
+	char buffer[10];
+	/* Filling the buffer with 'A' */
+	_memset(buffer, 'A', sizeof(buffer));
+
+	/* Printing the buffer */
+	for (int i = 0; i < sizeof(buffer); i++)
 	{
-	s[i] = b;
+	printf("%c ", buffer[i]);
 	}
-	return s;
-}
+	printf("\n");
 
+	return 0;
+}
