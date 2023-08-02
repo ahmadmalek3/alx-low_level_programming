@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _puts_recursion - Prints a string, followed by a new line.
@@ -11,11 +12,11 @@ void _puts_recursion(char *s)
 	if (*s == '\0')
 	{
 	/* Base case: End of string reached, print a new line */
-	_putchar('\n');
+	putchar('\n');
 	return;
 	}
 
 	/* Print the current character and move to the next character recursively */
-	_putchar(*s);
+	putchar(*s);
 	_puts_recursion(s + 1);
 }
