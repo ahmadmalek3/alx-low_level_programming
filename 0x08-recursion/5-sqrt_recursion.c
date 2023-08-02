@@ -4,38 +4,29 @@
 /**
  * sqrt_recursive - Recursive helper function to find the square root.
  * @n: The number for which the square root is to be calculated.
- * @start: The starting point for the search.
- * @end: The ending point for the search.
+ * @x: The current approximation of the square root.
  *
  * Return: The square root of n, or -1
  * if it does not have a natural square root.
  */
-int sqrt_recursive(int n, int start, int end)
+int sqrt_recursive(int n, int x)
 {
-	int mid;
+	int sqrt_approx = (x + n / x) / 2;
 
-	if (start > end)
+	if (sqrt_approx == x || sqrt_approx == x + 1)
 	{
-	/* Base case: Number does not have a natural square root */
+	/* Base case: Found the square root or the next integer approximation */
 	return (-1);
 	}
 
-	mid = (start + end) / 2;
-	if (mid * mid == n)
+	if (sqrt_approx * sqrt_approx == n)
 	{
 	/* Base case: Found the square root */
-	return (mid);
+	return (sqrt_approx);
 	}
-	else if (mid * mid > n)
-	{
-	/* Search in the left half */
-	return (sqrt_recursive(n, start, mid - 1));
-	}
-	else
-	{
-	/* Search in the right half */
-	return (sqrt_recursive(n, mid + 1, end));
-	}
+
+	/* Continue the recursive search with the new approximation */
+	return (sqrt_recursive(n, sqrt_approx));
 }
 
 /**
@@ -52,6 +43,6 @@ int _sqrt_recursion(int n)
 	return (-1);
 	}
 
-	/* Call the recursive helper function with the range of 0 to n */
-	return (sqrt_recursive(n, 0, n));
+	/* Call the recursive helper function with the initial approximation of n/2 */
+	return (sqrt_recursive(n, n / 2));
 }
