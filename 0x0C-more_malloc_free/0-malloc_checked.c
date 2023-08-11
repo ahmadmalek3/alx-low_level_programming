@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -7,7 +6,8 @@
  * @b: The number of bytes to allocate.
  *
  * Return: Pointer to the allocated memory.
- *         If malloc fails, the function terminates with a status value of 98.
+ * If malloc fails, the function causes normal
+ * process termination with a status value of 98.
  */
 void *malloc_checked(unsigned int b)
 {
@@ -15,7 +15,7 @@ void *malloc_checked(unsigned int b)
 
 	if (ptr == NULL)
 	{
-	fprintf(stderr, "Memory allocation failed\n");
+	fprintf(stderr, "Error: malloc failed\n");
 	exit(98);
 	}
 
