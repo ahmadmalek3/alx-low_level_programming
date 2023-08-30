@@ -10,10 +10,18 @@
 
 int main(void)
 {
-	for (char Alpha = 'a'; Alpha <= 'z'; Alpha++)
+	char Alpha = 'A';
+
+	for (char alpha = 'a'; alpha <= 'z'; alpha++)
+	{
+		putchar(alpha);
+	}
+	while (Alpha < 'Z')
 	{
 		putchar(Alpha);
+	Alpha ++;
 	}
 	putchar('\n');
+
 	return (0);
 }
