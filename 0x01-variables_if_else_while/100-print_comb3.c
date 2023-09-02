@@ -21,7 +21,6 @@ int main(void)
 		{
 			putchar(firstdigit + '0');
 			putchar(seconddigit + '0');
-			
 			if (firstdigit != 8 || seconddigit != 9)
 			putchar(',');
 			putchar(' ');
