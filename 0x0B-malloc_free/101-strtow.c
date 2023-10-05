@@ -71,14 +71,15 @@ char **strtow(char *str)
 	free(words[k]);
 	free(words);
 	return (NULL);
-	
+	}
+
 	for (k = 0; k < len; k++)
 	words[i][k] = str[j++];
+	}
 
 	words[i][k] = '\0';
-	}
+	
 
 	words[word_count] = NULL;
 	return (words);
-	}
 }	
